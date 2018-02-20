@@ -1,5 +1,6 @@
 cycler==0.10.0
 decorator==4.2.1
+dlib==19.9.0
 matplotlib==2.1.2
 networkx==2.1
 numpy==1.14.0
