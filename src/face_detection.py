@@ -2,7 +2,6 @@ import os
 import dlib
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 from skimage import io
 from skimage.transform import rescale
 from skimage.color import rgb2gray
