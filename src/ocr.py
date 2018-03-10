@@ -10,13 +10,12 @@ from skimage.color import rgb2gray
 from skimage.filters import threshold_otsu, gaussian, frangi
 from skimage.measure import find_contours
 
-def ada_ocr(image_path=None, debug=False):
+def ada_ocr(images, debug=False):
     # Initialization
     predicted_results = []
 
     # Import Regions of interest
-    cropped = cropped_images(image_path=image_path)
-
+    cropped = images
     # Prepoceesing
     for crop in cropped:
         # Converting RGB to GRAY
@@ -69,7 +68,8 @@ def ada_ocr(image_path=None, debug=False):
 
 def main():
     image_path = sys.argv[1]
-    result = ada_ocr(image_path=image_path)
+    images = cropped_images(image_path=image_path)
+    result = ada_ocr(images=images)
     print(result)
 
 if __name__ == '__main__':
